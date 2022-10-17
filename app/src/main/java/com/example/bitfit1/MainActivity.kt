@@ -32,12 +32,6 @@ class MainActivity : AppCompatActivity() {
 
         exerciseAddButton = findViewById(R.id.exerciseButton)
 
-        // example of how to use the data
-//        val color = intent.getSerializableExtra("Exercise!") as ExerciseData?
-//
-//        if(color?.exerciseName != null && color.exerciseTime != null) {
-//            exerciseAddButton.text = color.exerciseName
-//        }
         val exerciseMain = intent.getSerializableExtra("Exercise!") as ExerciseData?
 
         lifecycleScope.launch {

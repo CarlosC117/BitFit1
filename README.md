@@ -1,6 +1,6 @@
 # Android Project 5 - *BitFit 1*
 
-Submitted by: **Carlos Chavez*
+Submitted by: *Carlos Chavez*
 
 **BitFit 1** is a health metrics app that allows users to track their exercies they have done by adding their entries. 
 

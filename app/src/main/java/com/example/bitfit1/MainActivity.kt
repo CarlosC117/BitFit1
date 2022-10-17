@@ -16,11 +16,8 @@ class MainActivity : AppCompatActivity() {
 
         // When user taps button to add it opens other activity.
         exerciseAddButton.setOnClickListener {
-            val intent = Intent(this, ExerciseActivity::class.java)
-
-            intent.putExtra("Extra", "Jumping")
-
-            this.startActivity(intent)
+            val intentMain = Intent(this, ExerciseActivity::class.java)
+            this.startActivity(intentMain)
         }
     }
 

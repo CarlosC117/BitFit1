@@ -28,7 +28,7 @@ class ExerciseActivity : AppCompatActivity() {
                 val intentExercise = Intent(this, MainActivity::class.java)
                 // Send information back!
                 intentExercise.putExtra("Exercise!"
-                    , ExerciseData(time.text.toString(), exerciseDone.text.toString()))
+                    , ExerciseData(exerciseDone.text.toString(), time.text.toString()))
 
                 this.startActivity(intentExercise)
             }

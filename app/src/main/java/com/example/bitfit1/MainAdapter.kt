@@ -11,27 +11,27 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 
-class MainAdapter (private val context: Context, private val exercises: MutableList<Int>):
+class MainAdapter (private val context: Context, private val exercises: MutableList<ExerciseData>):
     RecyclerView.Adapter<MainAdapter.ViewHolder>() {
 
     // set variables
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
+        var nameOfExercise: TextView = itemView.findViewById(R.id.exerciseTvName)
+        var timeOfExercise: TextView = itemView.findViewById(R.id.userTime)
 
-        // Removed the override cause no overriding has happened
-        fun onClick(v: View?) {
-            val exercise = exercises[0]  // Adapter
-        }
+    }
+
+    // not done set variables to one another
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+        val exercise = exercises[position]
+        holder.nameOfExercise.text = exercise.exerciseName
+        holder.timeOfExercise.text = exercise.exerciseTime
     }
 
     // set the view holder
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(context).inflate(R.layout.main_list, parent, false)
         return ViewHolder(view)
-    }
-
-    // not done set variables to one another
-    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        println("Hi")
     }
 
     override fun getItemCount(): Int {
